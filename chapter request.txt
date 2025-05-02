@@ -1,0 +1,22 @@
+                    <?php $success = true ?>
+                    <?php if (isset($success)) : ?>
+                        <div>
+                            <img src="<?= $comic["thumbnail"] ?>" alt="" width="90">
+                        </div>
+                    <?php endif ?>
+                        <?php if (isset($success)) : ?>
+                            <h1 class="font-semibold mb-2 text-lg"><a href=""><?= $comic["title"] ?></a></h1>
+                        <?php endif ?>
+                        <div>
+                            <?php 
+                                try {
+                                    $comic_details = json_decode(file_get_contents($comic["detail_url"]), true);
+                                    $success = true;
+                                } catch (Exception $e) {
+                                    unset($success);
+                                    continue;
+                                }
+                            ?>
+<p class="p-1 mb-1 w-max bg-slate-200 text-sm rounded-sm shadow-sm">Chapter <?= $comic_details['data']['chapters'][0]["chapter"] ?></p>
+                            <p class="p-1 mb-1 w-max bg-slate-200 text-sm rounded-sm shadow-sm">Chapter <?= $comic_details['data']['chapters'][1]["chapter"] ?></p>
+                            <p class="p-1 mb-1 w-max bg-slate-200 text-sm rounded-sm shadow-sm">Chapter <?= $comic_details['data']['chapters'][2]["chapter"] ?></p>
