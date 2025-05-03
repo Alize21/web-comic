@@ -1,3 +1,3 @@
-    <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
+  <script src="<?= base_url('assets/js/script.js') ?>"></script>
   </body>
 </html>

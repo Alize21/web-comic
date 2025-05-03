@@ -1,6 +1,18 @@
 @import "tailwindcss";
 
 @theme {
-    --color-primary: oklch(60% 0.118 184.704); 
-    --color-secondary: oklch(92.9% 0.013 255.508); 
+  --color-light: oklch(92.9% 0.013 255.508); 
+    --color-manhua: oklch(60% 0.118 184.704); 
+    --color-manhwa: oklch(63.7% 0.237 25.331); 
+    --color-manga: oklch(79.5% 0.184 86.047); 
   }
+
+.manhua {
+  @apply bg-manhua;
+}
+.manhwa {
+  @apply bg-manhwa;
+}
+.manga {
+  @apply bg-manga;
+}
