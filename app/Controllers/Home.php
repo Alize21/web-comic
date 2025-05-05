@@ -7,17 +7,25 @@ use Exception;
 
 class Home extends BaseController
 {
+    protected $api;
+    protected $apiConfig;
+    
+    public function __construct()
+    {
+        $this->api = new APIService();
+        $this->apiConfig = new \Config\ApiEndpoints();
+    }
+
     public function index()
     {     
-        $api = new APIService();
-        
+                
         try {
-            $comic = $api->get('http://localhost:3000/api/komikcast/');
+            $comics = $this->api->get($this->apiConfig->komicast);
 
             $data = [
-                'next_page' => $comic["next_page"],
-                'prev_page' => $comic["prev_page"],
-                'comics' => $comic["data"],
+                'next_page' => $comics["next_page"],
+                'prev_page' => $comics["prev_page"],
+                'comics' => $comics["data"],
             ];
 
             return view('templates/header')
