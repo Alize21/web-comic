@@ -33,39 +33,3 @@ class Home extends BaseController
 
 }
 
-// $client = \config\Services::curlrequest();
-
-// $maxRetries = 3;
-// $delaySeconds = 2;
-// $attempt = 0;
-// $success = false;
-
-// while ($attempt < $maxRetries && !$success) {
-//     try {
-//         $attempt++;
-
-//         $response = $client->get('http://localhost:3000/api/komikcast/');
-//         $comic = json_decode($response->getBody(), true);
-
-//         if (!$comic) {
-//             throw new \Exception('Failed to create response');
-//         }
-
-//         $success = true;
-//     } catch (\Exception $e) {
-//         log_message("error", "attempt -{$attempt} failed: " . $e->getMessage());
-
-//         if ($attempt < $maxRetries) {
-//             sleep($delaySeconds);
-//         } else {
-//             return view('templates/header')
-//                 .view('errors/error_404', ['message' => 'Failed to fetch data from server'])
-//                 .view('templates/footer');
-//         }
-//     }    
-// }       
-// $data = [
-//     'next_page' => $comic["next_page"],
-//     'prev_page' => $comic["prev_page"],
-//     'comics' => $comic["data"],
-// ];
