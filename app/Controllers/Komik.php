@@ -17,12 +17,15 @@ class Komik extends BaseController {
 
     public function index($param) {
         try {
-            $comic = $this->api->get($this->apiConfig->komicast . $param);
+            $comic = $this->api->get($this->apiConfig->komicast . $param)["data"];
 
             $data = [
-                'title' => $comic['data']['title'],
-                'thumbnail' => $comic['data']['thumbnail'],
-                'synopsis' => $comic['data']['synopsis'],
+                'title' => $comic['title'],
+                'thumbnail' => $comic['thumbnail'],
+                'synopsis' => $comic['synopsis'],
+                'meta_info' => $comic['meta_info'],
+                'genres' => $comic['genre'],
+                'chapters' => $comic['chapters'],
             ];
 
             return view('templates/header')
