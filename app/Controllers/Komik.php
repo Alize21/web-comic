@@ -15,7 +15,8 @@ class Komik extends BaseController {
     }
 
 
-    public function index($param) {
+    public function index($param) 
+    {
         try {
             $comic = $this->api->get($this->apiConfig->komicast . $param)["data"];
 
@@ -30,6 +31,27 @@ class Komik extends BaseController {
 
             return view('templates/header')
             .view('komik/index', $data)
+            .view('templates/footer');
+            
+        } catch (\Exception $e) {
+            return view('templates/header')
+            .view('errors/error_404', ['message' => 'Failed to fetch data from server'])
+            .view('templates/footer');
+        }
+    }
+
+    public function chapter($chapterSlug)
+    {
+        $endPoints = 'chapter/' . $chapterSlug;
+        try {
+            $comicChapter = $this->api->get($this->apiConfig->komicast . $endPoints)['data'];
+
+            $data = [
+                'images' => $comicChapter
+            ];
+
+            return view('templates/header')
+            .view('komik/chapter', $data)
             .view('templates/footer');
             
         } catch (\Exception $e) {

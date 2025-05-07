@@ -31,7 +31,7 @@
 
             <div>
                 <?php foreach ($chapters as $chapter) : ?>
-                    <a href="<?= $chapter["detail_url"] ?>" class="block"><?= $chapter["chapter"] ?></a>
+                    <a href="<?= base_url('komik/chapter/' . $chapter["slug"]) ?>" class="block"><?= $chapter["chapter"] ?></a>
                 <?php endforeach ?>
             </div>
         </div>
