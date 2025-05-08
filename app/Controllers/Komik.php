@@ -55,9 +55,8 @@ class Komik extends BaseController {
             .view('templates/footer');
             
         } catch (\Exception $e) {
-            return view('templates/header')
-            .view('errors/error_404', ['message' => 'Failed to fetch data from server'])
-            .view('templates/footer');
+            return view('errors/error_404', ['message' => 'Failed to fetch data from server']);
+            
         }
     }
 }

@@ -71,7 +71,7 @@
 <body>
     <div class="wrap">
         <h1>404</h1>
-
+        <h2><?= $message ?></h2>
         <p>
             <?php if (ENVIRONMENT !== 'production') : ?>
                 <?= nl2br(esc($message)) ?>
