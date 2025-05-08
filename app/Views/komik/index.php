@@ -1,4 +1,4 @@
-<section>
+<section class="mb-20">
     <div class="container relative">
         <div class="w-full h-64 bg-no-repeat bg-top brightness-[0.25] bg-cover blur-xs" style="background-image: url(<?= $thumbnail ?>);">
         </div>
@@ -29,9 +29,19 @@
                 <p><?= $synopsis ?></p>
             </div>
 
-            <div>
+            <div class="w-full max-h-screen mt-10 overflow-x-hidden overflow-scroll font-semibold">
                 <?php foreach ($chapters as $chapter) : ?>
-                    <a href="<?= base_url('komik/chapter/' . $chapter["slug"]) ?>" class="block"><?= $chapter["chapter"] ?></a>
+                    <?php $chapterLink =  base_url('komik/chapter/' . $chapter["slug"]) ?>
+                    <div class="w-full py-2 px-3 flex justify-between border-b-2 border-b-primary hover:bg-linear-to-r hover:from-primary hover:to-secondary cursor-pointer group" onclick="window.location.href='<?= $chapterLink ?>'">
+                        <a href="<?= $chapterLink ?>" class="transition-all duration-200 ease-in-out group-hover:text-light group-hover:scale-105">
+                            <p >Chapter <?= $chapter["chapter"] ?></p> 
+                        </a>
+
+                        <a href="<?= $chapterLink ?>" class="transition-all duration-200 ease-in-out group-hover:text-light group-hover:scale-105">
+
+                            <?= $chapter["release"] ?>
+                        </a>
+                    </div>
                 <?php endforeach ?>
             </div>
         </div>
