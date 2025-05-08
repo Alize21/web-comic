@@ -18,7 +18,7 @@
             <div class="absolute -top-40 left-0 w-full h-32 bg-[linear-gradient(to_top,_white_3%,_transparent_100%)]"></div>
 
             <div class="w-full mt-10 z-10">
-                <div class="flex gap-1">
+                <div class="flex gap-1 flex-wrap max-w-80">
                 <?php foreach ($genres as $genre) : ?>
                     <a href="" class="block py-0.5 px-1.5 bg-linear-to-bl from-primary to-secondary rounded-md shadow-lg text-sm text-light font-semibold"><?= $genre ?></a>
                 <?php endforeach ?>
