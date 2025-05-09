@@ -50,9 +50,8 @@ class Komik extends BaseController {
                 'images' => $comicChapter
             ];
 
-            return view('templates/header')
-            .view('komik/chapter', $data)
-            .view('templates/footer');
+            return view('komik/chapter', $data);
+            
             
         } catch (\Exception $e) {
             return view('errors/error_404', ['message' => 'Failed to fetch data from server']);
