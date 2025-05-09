@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+@utility container {
+  @apply max-w-screen;
+}
+
 @theme {
   --color-primary: oklch(51.1% 0.262 276.966);
   --color-secondary: oklch(51.8% 0.253 323.949);
