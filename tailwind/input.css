@@ -12,6 +12,7 @@
     --color-manhua: oklch(60% 0.118 184.704); 
     --color-manhwa: oklch(63.7% 0.237 25.331); 
     --color-manga: oklch(79.5% 0.184 86.047); 
+    --color-opacity: rgba(0,0,0,0.4);
   }
 
 .manhua {

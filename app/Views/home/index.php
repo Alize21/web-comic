@@ -1,4 +1,4 @@
-<section class=" my-5 flex justify-center">
+<section class=" my-5 flex mt-10 justify-center">
     <div class="container w-full p-5">
         <div class="w-full flex flex-wrap justify-center">
             <?php foreach ($comics as $comic) : ?>

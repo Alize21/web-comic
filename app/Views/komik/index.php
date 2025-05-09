@@ -1,9 +1,9 @@
-<section class="mb-20">
+<section class="mb-20 mt-10">
     <div class="container mx-auto relative">
         <div class="w-full h-64 bg-no-repeat bg-top brightness-[0.25] bg-cover blur-xs md:h-72" style="background-image: url(<?= $thumbnail ?>);">
         </div>
 
-        <div class="w-full p-5 flex absolute top-14 gap-6 z-10 md:py-0">
+        <div class="w-full p-5 flex absolute top-14 gap-6 z-[2] md:py-0">
             <div class="h-40 w-28 rounded-md overflow-hidden shrink-0 md:w-44 md:h-60 md:ml-7 lg:w-56 lg:h-72">
                 <img src="<?= $thumbnail ?>" alt="" class="w-full h-full">
             </div>
@@ -15,7 +15,7 @@
         </div>
 
         <div class="container relative px-5 lg:mt-20">
-            <div class="absolute -top-40 left-0 w-full h-32 bg-[linear-gradient(to_top,_white_3%,_transparent_100%)] md:hidden"></div>
+            <div class="absolute -top-40 left-0 w-full h-32 bg-[linear-gradient(to_top,_white_3%,_transparent_100%)] z-[1] md:hidden"></div>
 
             <div class="w-full mt-10 z-10">
                 <div class="flex gap-1 flex-wrap max-w-80">
