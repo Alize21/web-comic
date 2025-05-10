@@ -1,4 +1,4 @@
-<section class="mb-20 mt-10">
+<section class="mb-20">
     <div class="container mx-auto relative">
         <div class="w-full h-64 bg-no-repeat bg-top brightness-[0.25] bg-cover blur-xs md:h-72" style="background-image: url(<?= $thumbnail ?>);">
         </div>
