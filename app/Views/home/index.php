@@ -1,3 +1,9 @@
+<section>
+    <div class="container mx-auto relative">
+      <?php var_dump($popular_comics) ?>
+    </div>
+</section>
+
 <section class=" my-5 flex mt-10 justify-center">
     <div class="container w-full p-5">
         <div class="w-full flex flex-wrap justify-center">

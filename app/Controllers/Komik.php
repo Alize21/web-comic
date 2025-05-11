@@ -18,7 +18,7 @@ class Komik extends BaseController {
     public function index($param) 
     {
         try {
-            $comic = $this->api->get($this->apiConfig->komicast . $param)["data"];
+            $comic = $this->api->get($this->apiConfig->komicast["main"] . $param)["data"];
 
             $data = [
                 'title' => $comic['title'],
@@ -44,7 +44,7 @@ class Komik extends BaseController {
     {
         $endPoints = 'chapter/' . $chapterSlug;
         try {
-            $comicChapter = $this->api->get($this->apiConfig->komicast . $endPoints)['data'];
+            $comicChapter = $this->api->get($this->apiConfig->komicast["main"] . $endPoints)['data'];
 
             $data = [
                 'images' => $comicChapter
