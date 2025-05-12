@@ -4,6 +4,12 @@
   @apply max-w-screen;
 }
 
+@utility scrollbar-hidden {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 @theme {
   --color-primary: oklch(51.1% 0.262 276.966);
   --color-secondary: oklch(51.8% 0.253 323.949);

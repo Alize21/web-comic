@@ -1,10 +1,32 @@
-<section>
-    <div class="container mx-auto relative">
-      <?php var_dump($popular_comics) ?>
+<section class="relative">
+    <div class="overflow-x-auto flex whitespace-nowrap snap-x scrollbar-hidden md:h-[65vh]">
+
+        <div class="absolute text-light z-[5] top-10 left-6 md:left-12 md:top-18">
+            <h2 class="font-semibold text-2xl">Popular</h2>
+        </div>
+        
+        <?php foreach ($popular_comics as $popular_comic) : ?>
+        <div class="container mx-auto relative snap-center h-[45vh] md:h-full">
+            <div class="w-[100vw] h-full bg-no-repeat bg-top brightness-[0.25] bg-cover" style="background-image: url(<?= $popular_comic["thumbnail"] ?>);">
+            </div>
+
+            <div class="w-full p-5 flex absolute top-14 gap-6 z-[2] md:py-0 md:mt-14">
+                <div class="h-40 w-28 rounded-md shrink-0 md:w-44 md:h-60 md:ml-7 lg:w-56 lg:h-72">
+                    <img src="<?= $popular_comic["thumbnail"] ?>" alt="" class="w-full h-full">
+                </div>
+                <div class="text-light max-w-1/2">
+                    <h1 class="font-bold overflow-ellipsis text-2xl text-wrap line-clamp-3 h-fit leading-7 mb-3 md:max-w-fit md:max-h-40 md:line-clamp-4 md:text-4xl md:leading-9"><?= $popular_comic["title"] ?></h1>
+                </div>           
+            </div>
+        </div>
+        <?php endforeach ?>
+
+        <div class="absolute -bottom-1 left-0 w-full h-32 bg-[linear-gradient(to_top,_white_3%,_transparent_100%)] z-[1] md:bg-[linear-gradient(to_top,_white_1%,_transparent_100%)] md:h-1/2"></div>
+        
     </div>
 </section>
 
-<section class=" my-5 flex mt-10 justify-center">
+<section class=" my-5 flex justify-center">
     <div class="container w-full p-5">
         <div class="w-full flex flex-wrap justify-center">
             <?php foreach ($comics as $comic) : ?>

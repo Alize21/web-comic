@@ -24,7 +24,7 @@ class Home extends BaseController
             $popularComics = [];
             
             // Filter comics with rating > 7.90
-            for ($page = 2; $page <= 3; $page++) {
+            for ($page = 2; $page <= 2; $page++) {
                 $comicsFilter = $this->api->get($this->apiConfig->komicast["page"] . $page)['data'];
 
                 foreach ($comicsFilter as $comic) {
@@ -53,7 +53,7 @@ class Home extends BaseController
             
         } catch (\Exception $e) {
             return view('templates/header')
-            .view('errors/error_404', ['message' => 'Failed to fetch data from server, Home'.$e->getMessage()])
+            .view('errors/error_404', ['message' => 'Failed to fetch data from server'.$e->getMessage()])
             .view('templates/footer');
         }
     }
