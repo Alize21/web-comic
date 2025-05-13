@@ -1,33 +1,41 @@
-<section class="relative">
-    <div class="overflow-x-auto flex whitespace-nowrap snap-x scrollbar-hidden md:h-[65vh]">
+<section>
+    <div class="relative overflow-x-auto flex whitespace-nowrap snap-x scrollbar-hidden md:h-[65vh] swiper mySwiper">
 
-        <div class="absolute text-light z-[5] top-10 left-6 md:left-12 md:top-18">
+        <div class="hidden md:block absolute text-light z-[5] top-10 left-6 md:left-12 md:top-18 ">
             <h2 class="font-semibold text-2xl">Popular</h2>
         </div>
-        
-        <?php foreach ($popular_comics as $popular_comic) : ?>
-        <div class="container mx-auto relative snap-center h-[45vh] md:h-full">
-            <div class="w-[100vw] h-full bg-no-repeat bg-top brightness-[0.25] bg-cover" style="background-image: url(<?= $popular_comic["thumbnail"] ?>);">
-            </div>
 
-            <div class="w-full p-5 flex absolute top-14 gap-6 z-[2] md:py-0 md:mt-14">
-                <div class="h-40 w-28 rounded-md shrink-0 md:w-44 md:h-60 md:ml-7 lg:w-56 lg:h-72">
-                    <img src="<?= $popular_comic["thumbnail"] ?>" alt="" class="w-full h-full">
+        <div class="swiper-wrapper">
+            <?php foreach ($popularComics as $popularComic) : ?>
+            <?php $popularComicLink = base_url('komik/index/' . $popularComic['param']) ?>
+            <div class="swiper-slide cursor-pointer" onclick="window.location.href='<?= $popularComicLink ?>'">
+                <div class="container mx-auto snap-center h-[45vh] md:h-full">
+                    <div class="w-[100vw] h-full bg-no-repeat bg-top brightness-[0.25] bg-cover" style="background-image: url(<?= $popularComic["thumbnail"] ?>);">
+                    </div>
+
+                    <div class="w-full p-5 flex absolute top-14 gap-6 z-[20] md:py-0 md:mt-14">
+                        <div class="h-40 w-28 rounded-md shrink-0 md:w-44 md:h-64 md:ml-7 lg:w-56 lg:h-72">
+                            <img src="<?= $popularComic["thumbnail"] ?>" alt="" class="w-full h-full">
+                        </div>
+                        <div class="text-light max-w-1/2">
+                            <h1 class="font-bold text-2xl text-wrap line-clamp-3 leading-8  md:max-w-fit md:max-h-40 md:line-clamp-4 md:text-4xl md:leading-9"><?= $popularComic["title"] ?></h1>
+                        </div>           
+                    </div>
+                    
+                    <div class="absolute bottom-0 left-0 w-[1000vh] h-32 bg-[linear-gradient(to_top,_white_3%,_transparent_100%)] md:bg-[linear-gradient(to_top,_white_1%,_transparent_100%)] md:h-1/2 pointer-events-none"></div>
                 </div>
-                <div class="text-light max-w-1/2">
-                    <h1 class="font-bold overflow-ellipsis text-2xl text-wrap line-clamp-3 h-fit leading-7 mb-3 md:max-w-fit md:max-h-40 md:line-clamp-4 md:text-4xl md:leading-9"><?= $popular_comic["title"] ?></h1>
-                </div>           
             </div>
+            <?php endforeach ?>
         </div>
-        <?php endforeach ?>
 
-        <div class="absolute -bottom-1 left-0 w-full h-32 bg-[linear-gradient(to_top,_white_3%,_transparent_100%)] z-[1] md:bg-[linear-gradient(to_top,_white_1%,_transparent_100%)] md:h-1/2"></div>
-        
     </div>
 </section>
 
-<section class=" my-5 flex justify-center">
-    <div class="container w-full p-5">
+<section class="my-5 flex flex-col items-start">
+    <div class="text-black pl-5">
+        <h2 class="font-semibold text-2xl md:text-3xl">Latest update</h2>
+    </div>
+    <div class="container w-full px-5">
         <div class="w-full flex flex-wrap justify-center">
             <?php foreach ($comics as $comic) : ?>
             <?php $comicLink = base_url('komik/index/' . $comic['param'])?>
@@ -49,4 +57,22 @@
     </div>
 </section>
 
+<!-- swiper -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        autoplay: {
+            delay: 3000,
+        },
+        // loop: true,
+        on: {
+            slideChange: function () {
+            const isFirst = swiper.activeIndex === 0;
+            const isLast = swiper.activeIndex === swiper.slides.length - 1;
 
+            swiper.allowSlidePrev = !isFirst;
+            swiper.allowSlideNext = !isLast; 
+            }
+        }
+    });
+</script>

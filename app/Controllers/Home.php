@@ -44,7 +44,7 @@ class Home extends BaseController
                 'next_page' => $comics["next_page"],
                 'prev_page' => $comics["prev_page"],
                 'comics' => $comics["data"],
-                'popular_comics' => $popularComics,
+                'popularComics' => $popularComics,
             ];
 
             return view('templates/header')
