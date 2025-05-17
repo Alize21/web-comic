@@ -7,6 +7,7 @@ class ApiEndpoints extends BaseConfig {
     public $komicast = [
        "main" => 'http://localhost:3000/api/komikcast/',
        "page" => 'http://localhost:3000/api/komikcast?page=',
+       "search" => 'http://localhost:3000/api/komikcast/?s=',
     ];
     public $komiku = [
        "main" => 'http://localhost:3000/api/komiku/',

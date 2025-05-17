@@ -1,7 +1,7 @@
 <section>
     <div class="relative overflow-x-auto flex whitespace-nowrap snap-x scrollbar-hidden md:h-[65vh] swiper mySwiper">
 
-        <div class="hidden md:block absolute text-light z-[5] top-10 left-6 md:left-12 md:top-18 ">
+        <div class="block absolute text-light z-[5] top-10 left-6 md:left-12 md:top-18 lg:hidden">
             <h2 class="font-semibold text-2xl">Popular</h2>
         </div>
 

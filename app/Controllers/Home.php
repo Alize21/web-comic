@@ -24,7 +24,7 @@ class Home extends BaseController
             $popularComics = [];
             
             // Filter comics with rating > 7.90
-            for ($page = 2; $page <= 2; $page++) {
+            for ($page = 2; $page <= 3; $page++) {
                 $comicsFilter = $this->api->get($this->apiConfig->komicast["page"] . $page)['data'];
 
                 foreach ($comicsFilter as $comic) {
@@ -52,11 +52,31 @@ class Home extends BaseController
             .view('templates/footer');
             
         } catch (\Exception $e) {
-            return view('templates/header')
-            .view('errors/error_404', ['message' => 'Failed to fetch data from server'.$e->getMessage()])
-            .view('templates/footer');
+            return view('errors/error_404', ['message' => 'Failed to fetch data from server'.$e->getMessage()]);
         }
     }
 
-}
+    public function search()
+    {
+        $query = implode('+',explode(' ',$this->request->getGet('q')));
+
+        try {
+            $searchComics = $this->api->get($this->apiConfig->komicast["search"] . $query);
+
+            $data = [
+                'next_page' => $searchComics["next_page"],
+                'prev_page' => $searchComics["prev_page"],
+                'comics' => $searchComics["data"],
+                'searchPage' => true,
+            ];
+
+            return view('templates/header', $data)
+            .view('home/search', $data)
+            .view('templates/footer');
+        
+        } catch (\Exception $e) {
+                return view('errors/error_404', ['message' => 'Failed to fetch data from server'.$e->getMessage()]);
+            }
+        }
+    }
 

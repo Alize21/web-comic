@@ -48,3 +48,26 @@ window.onscroll = () => {
         header.classList.remove('navbar-fixed');
     }
 }
+
+// search form
+const searchButton = document.querySelector('#searchButton');
+const form = document.querySelector('#form');
+searchButton.addEventListener('click', (e) => {
+    form.classList.add('form-active');
+    form.classList.toggle('pointer-events-none');
+    overlay.classList.toggle('hidden');
+})
+// remove nav-menu
+document.addEventListener('click', (e) => {
+    if (!searchButton.contains(e.target) && !form.contains(e.target) && form.classList.contains('form-active')) {
+        form.classList.toggle('form-active');
+        form.classList.toggle('pointer-events-none');
+        overlay.classList.toggle('hidden');
+    }
+})
+const closeSearch = document.querySelector('#close-search');
+closeSearch.addEventListener('click', (e) => {       
+    form.classList.toggle('form-active');
+    form.classList.toggle('pointer-events-none');
+    overlay.classList.toggle('hidden');
+})
