@@ -31,14 +31,13 @@
 
             <div class="w-full max-h-screen mt-10 overflow-x-hidden overflow-scroll font-semibold">
                 <?php foreach ($chapters as $chapter) : ?>
-                    <?php $chapterLink =  base_url('komik/chapter/' . $chapter["slug"]) ?>
+                    <?php $chapterLink =  base_url('komik/chapter/' . $param . '/' . $chapter["slug"]) ?>
                     <div class="w-full py-2 px-3 flex justify-between border-b-2 border-b-primary hover:bg-linear-to-r hover:from-primary hover:to-secondary active:bg-linear-to-r active:from-red-400 active:to-secondary cursor-pointer group" onclick="window.location.href='<?= $chapterLink ?>'">
                         <a href="<?= $chapterLink ?>" class="transition-all duration-200 ease-in-out group-hover:text-light group-hover:scale-105 group-active:text-light group-active:scale-105">
                             <p >Chapter <?= $chapter["chapter"] ?></p> 
                         </a>
 
                         <a href="<?= $chapterLink ?>" class="transition-all duration-200 ease-in-out group-hover:text-light group-hover:scale-105 group-active:text-light group-active:scale-105">
-
                             <?= $chapter["release"] ?>
                         </a>
                     </div>
