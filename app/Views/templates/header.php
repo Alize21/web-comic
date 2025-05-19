@@ -22,7 +22,7 @@ if (isset($searchPage)) {
 }
 
 ?>
-<header class="w-full absolute left-0 top-0 flex items-center z-10 transition duration-500 " style="color: <?= $textColor ?>;">
+<header class="w-full absolute left-0 top-0 flex items-center z-10 transition duration-500 font-display" style="color: <?= $textColor ?>;">
     <div class="container relative">
         <div class="flex items-center justify-between relative px-4 py-3 md:px-6 md:py-4">
             <div class="hidden fixed top-0 left-0 w-[100vw] h-[100vh] bg-opacity z-[999]" id="overlay"></div>

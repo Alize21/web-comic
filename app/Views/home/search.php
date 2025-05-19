@@ -1,12 +1,12 @@
 <?php if ($comics == []) : ?>
-    <div class="flex justify-start w-full text-slate-700 mt-24 pl-5 md:justify-center md:mt-28">
+    <div class="flex justify-start w-full text-slate-700 mt-24 pl-5 md:justify-center md:mt-28 font-display">
         <div class="font-bold text-2xl md:text-3xl bg-gray-200 rounded-md p-2 shadow-lg md:p-6">
             <h1>Data not found</h1>
             <h1>Please insert another title</h1>
         </div>
     </div>
 <?php else : ?>
-    <section class="my-5 flex flex-col items-start mt-20">
+    <section class="my-5 flex flex-col items-start mt-20 font-display">
         <div class="text-black pl-5">
             <h2 class="font-semibold text-2xl md:text-3xl">Search query</h2>
         </div>

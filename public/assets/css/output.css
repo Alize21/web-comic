@@ -5,11 +5,10 @@
   :root, :host {
     --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --color-red-400: oklch(70.4% 0.191 22.216);
-    --color-amber-200: oklch(92.4% 0.12 95.746);
-    --color-amber-300: oklch(87.9% 0.169 91.605);
     --color-slate-200: oklch(92.9% 0.013 255.508);
     --color-slate-700: oklch(37.2% 0.044 257.287);
     --color-gray-200: oklch(92.8% 0.006 264.531);
@@ -42,6 +41,7 @@
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
+    --font-display: "Roboto", "sans-serif";
     --color-primary: oklch(51.1% 0.262 276.966);
     --color-secondary: oklch(51.8% 0.253 323.949);
     --color-secondary2: oklch(60.9% 0.126 221.723);
@@ -302,9 +302,6 @@
   }
   .mt-4 {
     margin-top: calc(var(--spacing) * 4);
-  }
-  .mt-5 {
-    margin-top: calc(var(--spacing) * 5);
   }
   .mt-6 {
     margin-top: calc(var(--spacing) * 6);
@@ -702,6 +699,15 @@
   }
   .text-center {
     text-align: center;
+  }
+  .font-display {
+    font-family: var(--font-display);
+  }
+  .font-sans {
+    font-family: var(--font-sans);
+  }
+  .font-serif {
+    font-family: var(--font-serif);
   }
   .text-2xl {
     font-size: var(--text-2xl);
@@ -1166,11 +1172,6 @@
       padding: calc(var(--spacing) * 6);
     }
   }
-  .md\:px-2 {
-    @media (width >= 48rem) {
-      padding-inline: calc(var(--spacing) * 2);
-    }
-  }
   .md\:px-4 {
     @media (width >= 48rem) {
       padding-inline: calc(var(--spacing) * 4);
@@ -1342,6 +1343,13 @@
       line-height: var(--tw-leading, var(--text-lg--line-height));
     }
   }
+}
+@font-face {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 200 700;
+  font-display: swap;
+  src: url("/assets/fonts/Roboto.ttf") format("truetype");
 }
 .manhua {
   background-color: var(--color-manhua);

@@ -1,4 +1,4 @@
-<section>
+<section class="font-display">
     <div class="relative overflow-x-auto flex whitespace-nowrap snap-x scrollbar-hidden md:h-[65vh] swiper mySwiper">
 
         <div class="block absolute text-light z-[5] top-10 left-6 md:left-12 md:top-18 lg:hidden">
@@ -31,7 +31,7 @@
     </div>
 </section>
 
-<section class="my-5 flex flex-col items-start">
+<section class="my-5 flex flex-col items-start font-display">
     <div class="text-black pl-5">
         <h2 class="font-semibold text-2xl md:text-3xl">Latest update</h2>
     </div>

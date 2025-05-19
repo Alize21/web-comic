@@ -2,7 +2,7 @@
 <html class="scroll-smooth" id="head" lang="css">
 <body >
   
-    <section class="container mt-10 mx-auto" >
+    <section class="container mt-10 mx-auto font-display">
         <div class="mx-auto px-6">
             <h1 class="capitalize text-2xl font-bold"><?= $chapterName ?></h1>
         </div>

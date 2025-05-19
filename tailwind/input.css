@@ -10,7 +10,16 @@
   }
 }
 
+@font-face {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 200 700;
+  font-display: swap;
+  src: url("/assets/fonts/Roboto.ttf") format("truetype");
+}
+
 @theme {
+  --font-display: "Roboto", "sans-serif"; 
   --color-primary: oklch(51.1% 0.262 276.966);
   --color-secondary: oklch(51.8% 0.253 323.949);
   --color-secondary2: oklch(60.9% 0.126 221.723);
