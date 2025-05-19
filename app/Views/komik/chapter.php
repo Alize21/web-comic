@@ -8,7 +8,7 @@
 </head>
 <body>
   
-    <section class="container mt-5 mx-auto">
+    <section class="container mt-10 mx-auto">
         <div class="mx-auto px-6">
             <h1 class="capitalize text-2xl font-bold"><?= $chapterName ?></h1>
         </div>
@@ -80,16 +80,6 @@
             </div>
         </div>
     </section>
-
-    <script>
-        function goToChapter() {
-            const select = document.querySelector('#chapterSelect');
-            const url = select.value;
-            if (url) {
-                window.location.href = url
-            }
-        }
-    </script>
-    <script src="<?= base_url('assets/js/script.js') ?>"></script>
+    <script src="<?= base_url('assets/js/ch.js') ?>"></script>
 </body>
 </html>

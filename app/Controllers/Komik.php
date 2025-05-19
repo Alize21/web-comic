@@ -76,7 +76,8 @@ class Komik extends BaseController {
                 'allChapters' => $allChapters,
             ];
 
-            return view('komik/chapter', $data);
+            return view('templates/header')
+                .view('komik/chapter', $data);
             
             
         } catch (\Exception $e) {
