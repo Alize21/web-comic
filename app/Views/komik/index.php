@@ -1,4 +1,4 @@
-<section class="mb-20 font-display">
+<section class="mb-20 font-display dark:text-light">
     <div class="container mx-auto relative">
         <div class="w-full h-64 bg-no-repeat bg-top brightness-[0.25] bg-cover blur-xs md:h-72" style="background-image: url(<?= $thumbnail ?>);">
         </div>
@@ -15,7 +15,7 @@
         </div>
 
         <div class="container relative px-5 lg:mt-20">
-            <div class="absolute -top-40 left-0 w-full h-32 bg-[linear-gradient(to_top,_white_3%,_transparent_100%)] z-[1] md:hidden"></div>
+            <div class="absolute -top-40 left-0 w-full h-32 bg-[linear-gradient(to_top,_white_3%,_transparent_100%)] z-[1] md:hidden dark:bg-[linear-gradient(to_top,_#030712_3%,_transparent_100%)]"></div>
 
             <div class="w-full mt-10 z-10">
                 <div class="flex gap-1 flex-wrap max-w-80">

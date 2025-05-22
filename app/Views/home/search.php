@@ -1,13 +1,13 @@
 <?php if ($comics == []) : ?>
-    <div class="flex justify-start w-full text-slate-700 mt-24 pl-5 md:justify-center md:mt-28 font-display">
+    <div class="flex justify-center w-full text-slate-700 mt-24 pl-5 md:justify-center md:mt-28 font-display">
         <div class="font-bold text-2xl md:text-3xl bg-gray-200 rounded-md p-2 shadow-lg md:p-6">
             <h1>Data not found</h1>
             <h1>Please insert another title</h1>
         </div>
     </div>
 <?php else : ?>
-    <section class="my-5 flex flex-col items-start mt-20 font-display">
-        <div class="text-black pl-5">
+    <section class="my-5 flex flex-col items-start mt-20 font-display dark:text-light">
+        <div class="text-black pl-5 dark:text-light">
             <h2 class="font-semibold text-2xl md:text-3xl">Search query</h2>
         </div>
         <div class="container w-full px-5">
@@ -22,7 +22,7 @@
                         <h1 class="font-semibold mb-2 text-sm truncate max-h-20 max-w-[70%] text-wrap lg:max-w-full lg:text-lg "><a href="<?= $comicLink ?>" class="lg:block lg:mx-auto"><?= $comic["title"] ?></a></h1>
                         <div class="lg:w-fit lg:gap-4">
                             <p class="p-1 mb-1 w-max text-sm rounded-sm shadow-sm text-light font-semibold lg:mb-0" id="type"><?= $comic['type'] ?></p>
-                            <p class="p-1 mb-1 w-max font-semibold bg-light text-sm rounded-sm shadow-sm lg:mb-0">Rating <?= $comic['rating'] ?></p>  
+                            <p class="p-1 mb-1 w-max font-semibold bg-light text-sm rounded-sm shadow-sm lg:mb-0 dark:text-primary">Rating <?= $comic['rating'] ?></p>  
                         </div>
                     </div>
                 </div>

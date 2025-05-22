@@ -71,3 +71,20 @@ closeSearch.addEventListener('click', (e) => {
     form.classList.toggle('pointer-events-none');
     overlay.classList.toggle('hidden');
 })
+
+// handle dark mode
+const darkMode = document.getElementById('darkMode');
+if (localStorage.getItem('theme') === 'dark') {
+    darkMode.checked = true;
+} else {
+    darkMode.checked = false;
+}
+darkMode.addEventListener('change', (e) => {
+    if (document.documentElement.classList.contains('dark')) {
+        document.documentElement.classList.remove('dark')
+        localStorage.setItem('theme', 'light')
+    } else {
+        document.documentElement.classList.add('dark')
+        localStorage.setItem('theme', 'dark')
+    }
+})

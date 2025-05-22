@@ -1,9 +1,5 @@
-<!DOCTYPE html>
-<html class="scroll-smooth" id="head" lang="css">
-<body >
-  
-    <section class="container mt-10 mx-auto font-display">
-        <div class="mx-auto px-6">
+      <section class="container mt-12 mx-auto font-display">
+        <div class="mx-auto px-6 dark:text-light">
             <h1 class="capitalize text-2xl font-bold"><?= $chapterName ?></h1>
         </div>
 
@@ -25,7 +21,7 @@
                             <h3 class="text-md font-semibold">Previous Chapter</h3>
                         </div>
                     <?php else : ?>
-                        <div class="p-2 flex justify-center items-center rounded-md shdow-lg bg-gray-200 md:px-4 lg:px-10 lg:py-4">
+                        <div class="p-2 flex justify-center items-center rounded-md shdow-lg bg-gray-200 md:px-4 lg:px-10 lg:py-4 dark:bg-gray-700 dark:text-slate-400">
                             <h3 class="text-md font-semibold">Previous Chapter</h3>
                         </div>
                     <?php endif ?>
@@ -35,7 +31,7 @@
                             <h3 class="text-md font-semibold">Next Chapter</h3>
                         </div>
                     <?php else : ?>
-                        <div class="p-2 flex justify-center items-center rounded-md shdow-lg bg-gray-200 md:px-4 lg:px-10 lg:py-4">
+                        <div class="p-2 flex justify-center items-center rounded-md shdow-lg bg-gray-200 md:px-4 lg:px-10 lg:py-4 dark:bg-gray-700 dark:text-slate-400">
                             <h3 class="text-md font-semibold">Next Chapter</h3>
                         </div>
                     <?php endif ?>
@@ -56,7 +52,7 @@
                             <h3 class="text-md font-semibold">Previous Chapter</h3>
                         </div>
                     <?php else : ?>
-                        <div class="p-2 flex justify-center items-center rounded-md shdow-lg bg-gray-200 md:px-4 lg:px-10 lg:py-4">
+                        <div class="p-2 flex justify-center items-center rounded-md shadow-lg bg-gray-200 md:px-4 lg:px-10 lg:py-4 dark:bg-gray-700 dark:text-slate-400">
                             <h3 class="text-md font-semibold">Previous Chapter</h3>
                         </div>
                     <?php endif ?>
@@ -66,7 +62,7 @@
                             <h3 class="text-md font-semibold">Next Chapter</h3>
                         </div>
                     <?php else : ?>
-                        <div class="p-2 flex justify-center items-center rounded-md shdow-lg bg-gray-200 md:px-4 lg:px-10 lg:py-4">
+                        <div class="p-2 flex justify-center items-center rounded-md shadow-lg bg-gray-200 md:px-4 lg:px-10 lg:py-4 dark:bg-gray-700 dark:text-slate-400">
                             <h3 class="text-md font-semibold">Next Chapter</h3>
                         </div>
                     <?php endif ?>

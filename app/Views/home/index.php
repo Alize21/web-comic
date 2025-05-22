@@ -22,7 +22,7 @@
                         </div>           
                     </div>
                     
-                    <div class="absolute bottom-0 left-0 w-[1000vh] h-32 bg-[linear-gradient(to_top,_white_3%,_transparent_100%)] md:bg-[linear-gradient(to_top,_white_1%,_transparent_100%)] md:h-1/2 pointer-events-none"></div>
+                    <div class="absolute bottom-0 left-0 w-[1000vh] h-32 bg-[linear-gradient(to_top,_white_3%,_transparent_100%)] md:bg-[linear-gradient(to_top,_white_1%,_transparent_100%)] md:h-1/2 pointer-events-none dark:bg-[linear-gradient(to_top,_#030712_3%,_transparent_100%)]"></div>
                 </div>
             </div>
             <?php endforeach ?>
@@ -31,8 +31,8 @@
     </div>
 </section>
 
-<section class="my-5 flex flex-col items-start font-display">
-    <div class="text-black pl-5">
+<section class="my-5 flex flex-col items-start font-display dark:text-light">
+    <div class="text-black pl-5 dark:text-light">
         <h2 class="font-semibold text-2xl md:text-3xl">Latest update</h2>
     </div>
     <div class="container w-full px-5">
@@ -48,7 +48,7 @@
                     <h1 class="font-semibold mb-2 text-sm truncate max-h-20 max-w-44 text-wrap lg:hidden"><a href="<?= $comicLink ?>" class="lg:block lg:mx-auto"><?= $comic["title"] ?></a></h1>
                     <div class="lg:flex lg:w-fit lg:gap-4">
                         <p class="p-1 mb-1 w-max text-sm rounded-sm shadow-sm text-light font-semibold lg:mb-0" id="type"><?= $comic['type'] ?></p>
-                        <p class="p-1 mb-1 w-max font-semibold bg-light text-sm rounded-sm shadow-sm lg:mb-0">Rating <?= $comic['rating'] ?></p>  
+                        <p class="p-1 mb-1 w-max font-semibold bg-light text-sm rounded-sm shadow-sm lg:mb-0 dark:text-primary">Rating <?= $comic['rating'] ?></p>  
                     </div>
                 </div>
             </div>

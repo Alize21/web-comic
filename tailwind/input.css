@@ -24,11 +24,17 @@
   --color-secondary: oklch(51.8% 0.253 323.949);
   --color-secondary2: oklch(60.9% 0.126 221.723);
   --color-light: oklch(92.9% 0.013 255.508); 
+  --color-dark: oklch(13% 0.028 261.692);
     --color-manhua: oklch(60% 0.118 184.704); 
     --color-manhwa: oklch(63.7% 0.237 25.331); 
     --color-manga: oklch(79.5% 0.184 86.047); 
     --color-opacity: rgba(0,0,0,0.4);
   }
+
+@custom-variant dark (&:where(.dark, .dark *));
+#darkMode:checked ~ label div.toggle-circle {
+    @apply translate-x-7;
+}  
 
 .manhua {
   @apply bg-manhua;
