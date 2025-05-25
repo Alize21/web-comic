@@ -18,8 +18,8 @@
                     <div class="h-40 my-7 w-28 md:w-28 lg:w-44 lg:items-center  relative group lg:cursor-pointer overflow-hidden lg:h-60 hover:scale-110 transition duration-500 ease-in-out group">
                         <img src="<?= $comic["thumbnail"] ?>" alt="" class="w-full h-full transition ease-in duration-300 group-hover:brightness-50">
                     </div>
-                    <div class="max-w-1/2 lg:max-w-[60%] lg:h-60">   
-                        <h1 class="font-semibold mb-2 text-sm truncate max-h-20 max-w-[70%] text-wrap lg:max-w-full lg:text-lg "><a href="<?= $comicLink ?>" class="lg:block lg:mx-auto"><?= $comic["title"] ?></a></h1>
+                    <div class="max-w-[40vw] lg:max-w-[60%] lg:h-60">   
+                        <h1 class="font-semibold mb-2 text-sm line-clamp-3 max-h-20 w-full text-wrap lg:text-lg "><a href="<?= $comicLink ?>" class="lg:block lg:mx-auto"><?= $comic["title"] ?></a></h1>
                         <div class="lg:w-fit lg:gap-4">
                             <p class="p-1 mb-1 w-max text-sm rounded-sm shadow-sm text-light font-semibold lg:mb-0" id="type"><?= $comic['type'] ?></p>
                             <p class="p-1 mb-1 w-max font-semibold bg-light text-sm rounded-sm shadow-sm lg:mb-0 dark:text-primary">Rating <?= $comic['rating'] ?></p>  

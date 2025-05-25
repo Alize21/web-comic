@@ -44,8 +44,8 @@
                     <img src="<?= $comic["thumbnail"] ?>" alt="" class="w-full h-full group-hover:brightness-50 transition ease-in duration-300">
                     <h1 class="hidden truncate max-h-44 text-light mx-auto transition ease-in-out duration-500 absolute top-full text-center text-lg font-bold  w-full text-wrap lg:block group-hover:-translate-y-full drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]"><?= $comic["title"] ?></h1>
                 </div>
-                <div class="lg:text-center lg:max-w-36 lg:mx-auto">   
-                    <h1 class="font-semibold mb-2 text-sm truncate max-h-20 max-w-44 text-wrap lg:hidden"><a href="<?= $comicLink ?>" class="lg:block lg:mx-auto"><?= $comic["title"] ?></a></h1>
+                <div class="max-w-[40vw] lg:text-center lg:max-w-36 lg:mx-auto">   
+                    <h1 class="font-semibold mb-2 text-sm line-clamp-3 max-h-20 max-w-44 text-wrap lg:hidden"><a href="<?= $comicLink ?>" class="lg:block lg:mx-auto"><?= $comic["title"] ?></a></h1>
                     <div class="lg:flex lg:w-fit lg:gap-4">
                         <p class="p-1 mb-1 w-max text-sm rounded-sm shadow-sm text-light font-semibold lg:mb-0" id="type"><?= $comic['type'] ?></p>
                         <p class="p-1 mb-1 w-max font-semibold bg-light text-sm rounded-sm shadow-sm lg:mb-0 dark:text-primary">Rating <?= $comic['rating'] ?></p>  
